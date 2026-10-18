@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Helping Hands</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+  <div class="container header-inner">
+
+    <!-- Logo -->
+    <a href="index.html" class="logo">
+      <span class="logo-icon">HH</span>
+      Helping Hands
+    </a>
+
+    <!-- Desktop Navigation -->
+    <nav class="nav-desktop">
+      <ul class="nav-list">
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="our-work.html">Our Work</a></li>
+        <li><a href="get-involved.html" class="active">Get Involved</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Actions -->
+    <div class="header-actions">
+      <div class="lang-switch">
+        <button class="active" data-lang="en">EN</button>
+        <button data-lang="fr">FR</button>
+      </div>
+
+      <a href="get-involved.html#donate" class="btn-donate">Donate</a>
+
+      <!-- Hamburger -->
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu Overlay -->
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mobile-menu-header">
+    <span class="logo-text">Helping Hands</span>
+    <button class="menu-close" id="menu-close" aria-label="Close menu">✕</button>
+  </div>
+
+  <nav>
+    <ul class="mobile-nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="our-work.html">Our Work</a></li>
+      <li><a href="get-involved.html">Get Involved</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="mobile-menu-footer">
+    <a href="get-involved.html#donate" class="btn-donate-full">Donate Now</a>
+  </div>
+</div>
+
+<!-- Dark overlay behind the menu -->
+<div class="menu-backdrop" id="menu-backdrop"></div>
+
+<!-- Emergency Banner -->
+<div class="emergency-banner">
+  Emergency Response Active — Flood relief in progress.
+  <a href="get-involved.html#donate">Donate now</a>
+</div>
+
+<!-- Hero Section -->
+<section class="page-header">
+    <div class="container">
+      <h1>Get Involved</h1>
+      <p>Donate, volunteer, or fundraise — every action creates real impact.</p>
+    </div>
+  </section>
+
+  <!-- ===== DONATE SECTION ===== -->
+  <section class="section" id="donate">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Donate</h2>
+        <p class="section-subtitle">Choose an amount and preferred payment method. You will receive a receipt and access to a personal dashboard.</p>
+      </div>
+
+      <div class="donate-box">
+        <!-- Amount Selection -->
+        <div class="amount-options">
+          <button class="amount-btn" data-amount="25">$25</button>
+          <button class="amount-btn active" data-amount="50">$50</button>
+          <button class="amount-btn" data-amount="100">$100</button>
+        </div>
+
+        <div class="form-group">
+          <label for="custom-amount">Or enter a custom amount</label>
+          <input type="number" id="custom-amount" placeholder="Enter amount" min="1" value="50">
+        </div>
+
+        <!-- Payment Methods -->
+        <p class="payment-label">Payment method</p>
+        <div class="payment-methods">
+          <button class="payment-btn active">Mobile Money</button>
+          <button class="payment-btn">Card</button>
+          <button class="payment-btn">PayPal</button>
+        </div>
+
+        <!-- Form -->
+        <form class="donate-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First name</label>
+              <input type="text" required>
+            </div>
+            <div class="form-group">
+              <label>Last name</label>
+              <input type="text" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Email (for receipt & dashboard access)</label>
+            <input type="email" required>
+          </div>
+
+          <div class="form-group">
+            <label>Phone (optional – for Mobile Money)</label>
+            <input type="tel" placeholder="+XXX ...">
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Complete Donation</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VOLUNTEER SECTION ===== -->
+  <section class="section volunteer-section" id="volunteer">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Volunteer</h2>
+        <p class="section-subtitle">Join our team on the ground or remotely. We also have a WhatsApp group for quick coordination.</p>
+      </div>
+
+      <div class="volunteer-box">
+        <form class="volunteer-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full name</label>
+              <input type="text" required>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Phone / WhatsApp</label>
+            <input type="tel" required>
+          </div>
+
+          <div class="form-group">
+            <label>Preferred role</label>
+            <select required>
+              <option value="">Select a role</option>
+              <option>Field support</option>
+              <option>Logistics</option>
+              <option>Community outreach</option>
+              <option>Remote (admin / translation / design)</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Tell us a bit about yourself</label>
+            <textarea rows="4" placeholder="Skills, availability, location..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Submit Volunteer Form</button>
+        </form>
+
+        <div class="whatsapp-box">
+          <p>Prefer WhatsApp?</p>
+          <a href="https://wa.me/0000000000" class="btn btn-whatsapp" target="_blank">
+            Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FUNDRAISE SECTION ===== -->
+  <section class="section" id="fundraise">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Fundraise</h2>
+        <p class="section-subtitle">Start your own campaign and rally your network for a specific project or general fund.</p>
+      </div>
+
+      <div class="fundraise-grid">
+        <div class="fundraise-card">
+          <h3>Create a Campaign</h3>
+          <p>Set a goal, choose a project, and share your page. Track donations in real time.</p>
+          <a href="#" class="btn-link">Start Fundraising →</a>
+        </div>
+
+        <div class="fundraise-card">
+          <h3>Birthday / Event Fundraiser</h3>
+          <p>Turn celebrations into impact with an easy shareable link for friends and family.</p>
+          <a href="#" class="btn-link">Learn more →</a>
+        </div>
+
+        <div class="fundraise-card">
+          <h3>Corporate Matching</h3>
+          <p>Does your employer match donations? We help you set it up.</p>
+          <a href="contact.html" class="btn-link">Contact us →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      
+      <!-- Brand -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-icon">HH</span>
+          Helping Hands
+        </div>
+        <p>A humanitarian organization dedicated to transparent, community-led aid.</p>
+      </div>
+
+      <!-- Explore -->
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="our-work.html">Our Work</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="news.html">News</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div class="footer-links">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="get-involved.html#donate">Donate</a></li>
+          <li><a href="get-involved.html#volunteer">Volunteer</a></li>
+          <li><a href="get-involved.html#fundraise">Fundraise</a></li>
+          <li><a href="about.html#transparency">Transparency</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="contact.html">Get in touch</a></li>
+          <li><a href="contact.html#faq">FAQ</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 Helping Hands. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,15 +1,25 @@
-'use strict';
+const menuToggle = document.getElementById('menu-toggle');
+const menuClose = document.getElementById('menu-close');
+const mobileMenu = document.getElementById('mobile-menu');
+const backdrop = document.getElementById('menu-backdrop');
 
-// Keep the copyright year current.
-document.getElementById('year').textContent = new Date().getFullYear();
+function openMenu() {
+  mobileMenu.classList.add('open');
+  backdrop.classList.add('open');
+  document.body.classList.add('menu-open');
+}
 
-// Close the mobile menu after choosing a section.
-const navigation = document.getElementById('mainNav');
-const mobileMenu = bootstrap.Collapse.getOrCreateInstance(navigation, { toggle: false });
-document.querySelectorAll('#mainNav .nav-link').forEach((link) => {
-  link.addEventListener('click', () => {
-    if (window.innerWidth < 992 && navigation.classList.contains('show')) {
-      mobileMenu.hide();
-    }
-  });
+function closeMenu() {
+  mobileMenu.classList.remove('open');
+  backdrop.classList.remove('open');
+  document.body.classList.remove('menu-open');
+}
+
+menuToggle.addEventListener('click', openMenu);
+menuClose.addEventListener('click', closeMenu);
+backdrop.addEventListener('click', closeMenu);
+
+// Close menu when any link is clicked
+document.querySelectorAll('.mobile-nav-list a').forEach(link => {
+  link.addEventListener('click', closeMenu);
 });
